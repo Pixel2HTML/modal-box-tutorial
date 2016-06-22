@@ -51,12 +51,12 @@ gulp.task 'default', ->
 # GitLab Task for Builds
 gulp.task 'gitlab', ->
   runSequence 'clean',
+    'svg:inline',
+    'svg:external',
+    'jade',
     'scripts',
     'coffee',
     'fonts',
     'sass',
     'imagemin',
-    'assets',
-    'svg:inline',
-    'svg:external',
-    'jade'
+    'assets'

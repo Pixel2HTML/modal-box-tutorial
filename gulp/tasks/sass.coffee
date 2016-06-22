@@ -31,6 +31,9 @@ gulp.task 'production:sass', ->
   .pipe $.autoprefixer
     browsers : ['last 2 versions']
   .pipe $.groupCssMediaQueries()
+  .pipe $.uncss
+    html : config.uncssHtml
+    ignore : config.uncssIgnore
   .pipe $.csscomb()
   .pipe $.cssnano()
   .pipe gulp.dest config.exportPath + '/css/'

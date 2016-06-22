@@ -19,13 +19,13 @@ gulp.task 'production:watch', ['browsersync'], ->
 # Default Production task Because YOLOP
 gulp.task 'production', ->
   runSequence 'clean',
+    'svg:inline',
+    'svg:external',
+    'production:jade',
     'production:scripts',
     'production:coffee',
     'fonts',
     'production:sass',
     'imagemin',
-    'assets',
-    'svg:inline',
-    'svg:external',
-    'production:jade',
+    'assets'
     'production:watch'

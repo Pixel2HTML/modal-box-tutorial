@@ -14,7 +14,9 @@ module.exports =
   ]
   # ... remember to add your non-html classes here like a class toggled by js/jQuery
   uncssIgnore : [
-    ''
+    '.modal-box.is-active'
+    '.modal-box.is-active .contents'
+    'header.is-blurred'
   ]
   # Paths to our font files
   fonts : [

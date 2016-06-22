@@ -1,0 +1,83 @@
+.modal-box
+  position: fixed
+  z-index: -1
+  background: rgba($black, 0.4)
+  top: 0
+  +size(100%)
+  text-align: center
+
+  display: flex
+  align-items: center
+  justify-content: center
+  opacity: 0
+  pointer-events: none
+
+  transition: $trns-duration
+
+  +is(active)
+    z-index: 2
+    opacity: 1
+    pointer-events: all
+
+    .contents
+      transform: translateY(0) translate3d(0,0,0)
+
+  .contents
+    background: $white
+    border-radius: 15px
+    display: flex
+    position: relative
+    width: 60%
+    transform: translate3d(0,0,0) translateY(-250%)
+    transition: $trns-duration cubic-bezier(0.5, -0.5, 0.5, 1.5)
+
+
+  .close
+    display: block
+    position: absolute
+    font-family: $font-family--secondary
+    top: -10px
+    right: -10px
+    +size( em(40px) )
+    border-radius: 50%
+    background: $main-color
+    color: $white
+    cursor: pointer
+    box-shadow: 0 5px 8px rgba(0,0,0,0.15)
+
+    span
+      +align
+
+  .half
+    +flex-cols(6)
+    padding: em(120px) em(40px)
+
+  .stars
+    min-height: 100%
+    border-radius: 10px 0 0 10px
+    +background('stars.jpg')
+
+  h4
+    line-height: 1
+    margin-bottom: em(10px)
+
+  p
+    margin-bottom: em(15px)
+
+  input
+    display: block
+    font-size: em(16px)
+    border: none
+    border-radius: 20px
+    padding: em(8px) em(15px)
+    outline: none
+    margin: 0 auto
+    text-align: center
+    box-shadow: 0 0 5px rgba(0,0,0,0.6)
+    transition: box-shadow $trns-duration, transform $trns-duration
+    color: $color-acento
+    line-height: 1
+    +placeholder( rgba($black, 0.7) )
+    &:hover
+      box-shadow: 0 5px 8px rgba(0,0,0,0.15)
+      transform: translate(0, -2px)

@@ -1,0 +1,24 @@
+*, *::before, *::before
+  box-sizing: border-box
+
+::selection
+  background: lighten($main-color, 12%)
+  color: $white
+
+
+img
+  max-width: 100%
+
+.is-hidden
+	position: absolute
+	height: 0
+	width: 0
+	visibility: hidden
+
+// Style for the SVGs
+.icon
+  display: block
+  width: 100%
+  fill: currentColor
+  stroke: currentColor
+  margin: 0 auto

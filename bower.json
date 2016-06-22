@@ -1,0 +1,23 @@
+{
+  "name": "ground-zero",
+  "authors": [
+    "mike3run <mpalauzarza@gmail.com>"
+  ],
+  "description": "archivos bower para vivir feliz :)",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2",
+    "modular-scale": "^2.1.1",
+    "manila-mixins": "*"
+  }
+}

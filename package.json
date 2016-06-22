@@ -1,0 +1,64 @@
+{
+  "name": "ground-zero",
+  "version": "2.8.0",
+  "description": "Punto de arranque para el nuevo proyecto de Don Mango Lite. Primer parada: Plaza de la Tecnología ;)",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp test",
+    "firstTime": "npm install -g gulp browser-sync npm-cache bower",
+    "getReady": "npm-cache install bower npm",
+    "start": "gulp",
+    "githubDeploy": "gulp gitlab && gulp deploy && gulp clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mike3run/ground-zero"
+  },
+  "keywords": [
+    "jade",
+    "js",
+    "coffeescript",
+    "sass",
+    "api",
+    "stylus",
+    "gulp"
+  ],
+  "author": "Miguel Palau @mpalau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mike3run/ground-zero/issues"
+  },
+  "homepage": "https://github.com/mike3run/ground-zero#readme",
+  "devDependencies": {
+    "browser-sync": "*",
+    "coffee-script": "*",
+    "del": "*",
+    "gulp": "*",
+    "gulp-accord": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-cache": "*",
+    "gulp-cheerio": "*",
+    "gulp-coffee": "*",
+    "gulp-concat": "*",
+    "gulp-csscomb": "*",
+    "gulp-cssfont64": "*",
+    "gulp-cssnano": "*",
+    "gulp-gh-pages": "*",
+    "gulp-group-css-media-queries": "*",
+    "gulp-imagemin": "*",
+    "gulp-load-plugins": "*",
+    "gulp-newer": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-svgmin": "*",
+    "gulp-svgstore": "*",
+    "gulp-uglify": "*",
+    "gulp-uncss": "*",
+    "gulp-util": "*",
+    "jade": "*",
+    "require-dir": "*",
+    "run-sequence": "*"
+  }
+}

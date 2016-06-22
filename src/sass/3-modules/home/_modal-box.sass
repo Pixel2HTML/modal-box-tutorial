@@ -5,13 +5,12 @@
   top: 0
   +size(100%)
   text-align: center
-
+  opacity: 0
   display: flex
   align-items: center
   justify-content: center
-  opacity: 0
-  pointer-events: none
 
+  pointer-events: none
   transition: $trns-duration
 
   +is(active)
@@ -25,11 +24,13 @@
   .contents
     background: $white
     border-radius: 15px
-    display: flex
     position: relative
-    width: 60%
+    width: 90%
     transform: translate3d(0,0,0) translateY(-250%)
     transition: $trns-duration cubic-bezier(0.5, -0.5, 0.5, 1.5)
+    +breakpoint(laptop)
+      display: flex
+      width: 60%
 
 
   .close
@@ -49,13 +50,19 @@
       +align
 
   .half
-    +flex-cols(6)
-    padding: em(120px) em(40px)
+    padding: em(40px)
+    +breakpoint(laptop)
+      +flex-cols(6)
+      padding: em(120px) em(40px)
 
   .stars
-    min-height: 100%
-    border-radius: 10px 0 0 10px
-    +background('stars.jpg')
+    min-height: 250px
+    border-radius: 10px 10px 0 0
+    background: url('../img/stars.jpg') no-repeat bottom/cover
+    +breakpoint(laptop)
+      min-height: 100%
+      border-radius: 10px 0 0 10px
+      +background('stars.jpg')
 
   h4
     line-height: 1

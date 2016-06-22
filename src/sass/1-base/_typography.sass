@@ -9,8 +9,10 @@ body
 
 h1
   @extend %header-default
-  font-size: ms(5)
-  line-height: 1.2
+  font-size: ms(4)
+  line-height: 1.1
+  +breakpoint(laptop)
+    font-size: ms(5)
 
 h2
   @extend %header-default

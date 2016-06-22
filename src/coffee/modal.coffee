@@ -5,6 +5,8 @@
   close = $('.modal-box .close')
   everything = $(document)
 
+  overlay = $('.modal-box .background-overlay')
+
   trigger.on 'click', ->
     header.addClass 'is-blurred'
     modal.addClass 'is-active'
@@ -14,6 +16,8 @@
     modal.removeClass 'is-active'
 
   close.on 'click', closing
+
+  overlay.on 'click', closing
 
   everything.keyup (e) ->
     if e.keyCode is 27

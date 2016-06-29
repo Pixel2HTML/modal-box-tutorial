@@ -1,1 +1,29 @@
-(function(){!function(e){var o,r,n,a,c,i,l;return a=e("header"),c=e(".modal-box"),l=e("header .modal-trigger"),o=e(".modal-box .close"),n=e(document),i=e(".modal-box .background-overlay"),l.on("click",function(){return a.addClass("is-blurred"),c.addClass("is-active")}),r=function(){return a.removeClass("is-blurred"),c.removeClass("is-active")},o.on("click",r),i.on("click",r),n.keyup(function(e){if(27===e.keyCode)return r()})}(jQuery)}).call(this);
+(function() {
+  (function($) {
+    var close, closing, everything, header, modal, overlay, trigger;
+    header = $('header');
+    modal = $('.modal-box');
+    trigger = $('header .modal-trigger');
+    close = $('.modal-box .close');
+    everything = $(document);
+    overlay = $('.modal-box .background-overlay');
+    trigger.on('click', function() {
+      header.addClass('is-blurred');
+      return modal.addClass('is-active');
+    });
+    closing = function() {
+      header.removeClass('is-blurred');
+      return modal.removeClass('is-active');
+    };
+    close.on('click', closing);
+    overlay.on('click', closing);
+    return everything.keyup(function(e) {
+      if (e.keyCode === 27) {
+        return closing();
+      }
+    });
+  })(jQuery);
+
+}).call(this);
+
+//# sourceMappingURL=app.js.map
